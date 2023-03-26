@@ -1,13 +1,36 @@
+вар.1 
+
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
 
 int_money = int(input("Введите сумму: "))
+
+a=per_cent['ТКБ']
+b=per_cent['СКБ']
+c=per_cent['ВТБ']
+d=per_cent['СБЕР']
+
+deposit = (int_money*a/100,int_money*b/100,int_money*c/100,int_money*d/100)
+deposit2 = (list(map(round, deposit)))
+deposit3 = max(list(deposit2))
+
+print(deposit2)
+print('Максимальная сумма, которую вы можете заработать: ', deposit3)
+
+
+
+вар.2
+
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+
+int_money = int(input("ведите сумму: "))
 
 deposit = (int_money*per_cent['ТКБ']/100,int_money*per_cent['СКБ']/100,int_money*per_cent['ВТБ']/100,int_money*per_cent['СБЕР']/100)
 
 deposit2 = (list(map(round, deposit)))
 
-print(deposit2)
+print (deposit2)
 
-deposit3 = max(list(deposit2))
+deposit3=max(list(deposit2))
 
-print('Максимальная сумма, которую вы можете заработать: ', deposit3)
+print ('Максимальная сумма, которую вы можете заработать: ', deposit3)
+
